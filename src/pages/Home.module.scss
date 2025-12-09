@@ -1,0 +1,98 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 22px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.studentBtn,
+.staffBtn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.studentBtn {
+  background: #3b82f6;
+  color: white;
+
+  &:hover {
+    background: #2563eb;
+  }
+}
+
+.staffBtn {
+  background: #10b981;
+  color: white;
+
+  &:hover {
+    background: #059669;
+  }
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .studentBtn,
+  .staffBtn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
