@@ -1,0 +1,365 @@
+.homeContainer {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    background: #f7f9fc;
+    min-height: 100vh;
+}
+
+/* LEFT: Calendar Card */
+.calendarCard {
+    width: 350px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.cardTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Legend */
+.legend {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.overrideDot,
+.attendanceDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.overrideDot { background: orange; }
+.attendanceDot { background: green; }
+
+/* Calendar override */
+.reactCalendar {
+    border: none !important;
+    width: 100% !important;
+    background: transparent !important;
+}
+
+
+/* RIGHT: Schedule Card */
+.scheduleCard {
+    flex: 1;
+    padding: 25px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.scheduleHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.scheduleHeader h2 {
+    margin: 0;
+    color: #1a1a1a;
+}
+
+/* No Schedule Box */
+.noSchedule {
+    text-align: center;
+    padding: 40px;
+    border-radius: 16px;
+    background: #fbfbfb;
+    border: 1px dashed #ddd;
+}
+
+.warningIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: orange;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+/* Subject List */
+.subjectList {
+    margin-top: 20px;
+}
+
+.subjectRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: #f4f8ff;
+}
+
+.subjectLeft h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.timeBox {
+    background: #eef3ff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.leftColumn {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Staff Directory Card */
+.staffCard {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.directoryTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Staff Grid */
+.staffGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+/* Each Staff Row */
+.staffItem {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: #f4f8ff;
+    border-radius: 12px;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.staffItem:hover {
+    background: #e9f0ff;
+}
+
+/* Avatar Circle */
+.staffAvatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #4677ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Info */
+.staffInfo h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.staffInfo p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.staffInfo span {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .homeContainer {
+        flex-direction: column;
+    }
+
+    .leftColumn {
+        width: 100%;
+    }
+
+    .calendarCard,
+    .staffCard {
+        width: 100%;
+    }
+}
+
+
+.rightColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Full Timetable Card */
+.fullTableCard {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-top: 10px;
+}
+
+.activeRow {
+    background: #eef5ff;
+    border-left: 4px solid #3b6cff;
+}
+
+.timeLeftText {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3b6cff;
+}
+
+
+.fullTableTitle {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Table Wrapper */
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.fullTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.fullTable th {
+    background: #eef3ff;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.fullTable td {
+    padding: 10px;
+    background: #f7f9ff;
+    margin: 6px;
+    border-radius: 8px;
+}
+
+/* Row spacing */
+.fullTable tr {
+    margin-bottom: 10px;
+    display: table-row;
+}
+
+/* Responsive Table */
+@media (max-width: 900px) {
+    .fullTable th,
+    .fullTable td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .fullTableCard {
+        width: 100%;
+    }
+}
+
+/* Mobile Stack */
+@media (max-width: 600px) {
+    .fullTable th,
+    .fullTable td {
+        font-size: 11px;
+        padding: 6px;
+    }
+}
+
+.headTitle {
+  width: 100%;
+  padding: 20px 25px 15px 25px;
+  margin-top: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  border-bottom: 2px solid #1e1e1e;
+
+  color: #1d1d1d;
+  text-align: left;
+
+  h1, h2, h3 {
+    margin: 0;
+    line-height: 1.28;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 1.25rem;   /* Desktop perfect */
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 1.05rem;
+  }
+  h3 {
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+
+  /* 📱 Smooth mobile scaling — NOT too small */
+  @media (max-width: 768px) {
+    padding: 18px 20px 12px 20px;
+
+    h1 {
+      font-size: 1.15rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    h3 {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* 📱 Very small phones */
+  @media (max-width: 480px) {
+    padding: 15px 15px 10px 15px;
+
+    h1 {
+      font-size: 1.05rem;
+    }
+    h2 {
+      font-size: 0.95rem;
+    }
+    h3 {
+      font-size: 0.85rem;
+    }
+  }
+}
